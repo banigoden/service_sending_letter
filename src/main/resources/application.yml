@@ -1,0 +1,17 @@
+spring:
+  r2dbc:
+    url: ${PROSELYTE_R2DBC_URL}
+    username: ${PROSELYTE_R2DBC_USER}
+    password: ${PROSELYTE_R2DBC_PASSWORD}
+    flyway:
+      url: ${PROSELYTE_DB_URL}
+      user: ${PROSELYTE_DB_USER}
+      password: ${PROSELYTE_DB_PASSWORD}
+      locations: classpath:db/migration
+    cloud:
+      aws:
+        credentials:
+          access-key: ${PROSELYTE_AWS_ACCESS_KEY}
+          secret-key: ${PROSELYTE_AWS_SECRET_KEY}
+        region:
+          static: ${PROSELYTE_AWS_REGION}
